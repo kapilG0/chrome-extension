@@ -1,0 +1,23 @@
+{
+    "manifest_version":2,
+    "name":"Launcher",
+    "version":"0.1.0",
+    "description":"Launcher",
+    "icons":{"128":"k128.png"},
+    "background": {
+        "scripts": ["popup.js"]
+    },
+    "content_scripts": [{
+        "js": [ "popup.js"],
+        "matches": ["http://*/*", "https://*/*"]
+      }],          
+    "permissions": ["<all_urls>","https://icanhazdadjoke.com/"],
+    "browser_action":{
+        "default_icon":"k.png",
+        "default_popup":"popup.htm"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net; object-src 'self'"
+
+
+    
+}
